@@ -19,6 +19,11 @@ def initdb_command():
 	print('Reinitialized the database.')
 
 
+@app.route('/', methods=['GET'])
+def home():
+
+	return {'test': 'success'}, 200
+
 @app.route('/submit_order', methods=['POST'])
 def add_recipe():
 
